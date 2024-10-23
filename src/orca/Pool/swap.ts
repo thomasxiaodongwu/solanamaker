@@ -38,7 +38,7 @@ export async function swap(
   const tokenMint = new PublicKey(tokenAddress);
   const whirlPool: Whirlpool = await fetchWhirlPool(tokenAddress);
   console.log('***whirlPool***')
-  console.log(whirlPool)
+  // console.log(whirlPool)
   let amountIn: Decimal,
     inToken: PublicKey,
     outToken: PublicKey,
@@ -96,7 +96,7 @@ export async function swap(
     signers.push(...ix.signers);
   }
   console.log('***swapTx whirlPool***')
-  console.log(swapTx)
+  // console.log(swapTx)
   // send the tx to jito
   try {
     const recentBlockhash = await connection.getLatestBlockhash();
@@ -106,7 +106,7 @@ export async function swap(
       instructions: [...ixList],
     }).compileToV0Message();
     console.log('***messageV0***')
-    console.log(messageV0)
+    // console.log(messageV0)
     const transaction = new VersionedTransaction(messageV0);
     transaction.sign([wallet, ...signers]);
     const res = await jito_executeAndConfirm(
