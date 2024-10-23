@@ -63,7 +63,7 @@ export async function jito_executeAndConfirm(
       axios.post(url, {
         jsonrpc: "2.0",
         id: 1,
-        method: "sendBundle",
+        method: "simulateTransaction",
         params: [final_transaction],
       })
     );
