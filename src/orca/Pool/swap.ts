@@ -129,5 +129,5 @@ export async function swap(
     console.log("🚀 ~ error: ", JSON.parse(JSON.stringify(error)));
   }
 }
-swap("buy", "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr", 1000000, -1); // buy 0.01 SOL worth of the token
+swap("buy", "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr", 1, -1); // buy 0.01 SOL worth of the token
 //swap("sell", "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr", -1, 50); // sell 50% of the token

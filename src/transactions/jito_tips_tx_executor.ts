@@ -69,6 +69,7 @@ export async function jito_executeAndConfirm(
     );
     console.log("Sending tx to Jito validators...");
     const res = await Promise.all(requests.map((p) => p.catch((e) => e)));
+    console.log(res);
     const success_res = res.filter((r) => !(r instanceof Error));
     if (success_res.length > 0) {
       console.log("Jito validator accepted the tx");
